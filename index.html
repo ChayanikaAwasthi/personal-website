@@ -271,7 +271,7 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.85rem}
         <div>
           <div class="ctl"><label for="gr">Demand growth <output id="grO"></output></label><input id="gr" type="range" min="0" max="30" value="20"><small>More homes, more electric heating and industry.</small></div>
           <div class="ctl"><label for="dr">Flexible loads <output id="drO"></output></label><input id="dr" type="range" min="0" max="100" value="0"><small>Water heaters and thermostats shift use out of the peak (demand response).</small></div>
-          <div class="ctl"><label for="bt">Batteries <output id="btO"></output></label><input id="bt" type="range" min="0" max="900" step="50" value="0"><small>Charge when demand is low, discharge at the peak.</small></div>
+          <div class="ctl"><label for="bt">Batteries <output id="btO"></output></label><input id="bt" type="range" min="0" max="1200" step="50" value="0"><small>Charge when demand is low, discharge at the peak.</small></div>
           <div class="ctl"><label for="so">Solar <output id="soO"></output></label><input id="so" type="range" min="0" max="1500" step="100" value="0"><small>Great at noon. Look at what it does at 6 pm.</small></div>
           <div class="ctl"><label class="chk"><input id="ev" type="checkbox"><span>Smart EV charging<small>Cars charge overnight instead of when people plug in after work.</small></span></label></div>
           <button class="btn" id="fix">Show me one way</button><button class="btn" id="reset">Reset</button>
@@ -376,7 +376,7 @@ var loads=[].slice.call(document.querySelectorAll("[data-load]")).map(function(e
   el.appendChild(note);el.appendChild(lc);
   return{el:el,d:+el.dataset.load,chip:chip,note:note.firstChild,b:-1,bh:-1,txt:"",nt:""};
 });
-var D=0;loads.forEach(function(l){l.cum=D;D+=l.d});   // D = 900 MW total load, served top to bottom
+var D=0;loads.forEach(function(l){l.cum=D;D+=l.d});   // D = 1200 MW total load, served top to bottom
 var gT=20,g=20,spin=0,flowOff=0,railOff=0,lastInt=-1,lastB="";
 document.documentElement.classList.toggle("fbm",fb);$("fb").checked=fb;
 var el={plate:$("plate"),stem:$("stem"),penw:$("penw"),tail:$("tail"),turb:$("turb"),gb:$("gbolt"),cond:$("cond"),cond2:$("cond2"),main:document.querySelector("main")};
