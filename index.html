@@ -315,9 +315,9 @@ var PROJECTS=[
   /* {t:"Project name", s:"One-line summary", w:"Year", status:"Complete", body:["The problem.","What you did.","The result."]} */
 ];
 var MISSIONS=[
-  {t:"Site Engineering EIT @ Mica Dam",s:"BC Hydro",w:"Jun 2026 to Dec 2026",logo:"hydro.png",status:"Active",body:["Worked at Mica Generating Station, one of Canada's largest hydro facility, situated behind BC's tallest Dam at 244m high, with a installed generating capacity of 2.7 GW. Involved with Dam projects, commissioning activities, and coordincation with engineering and construction contractors."]},
+  {t:"Site Engineering EIT @ Mica Dam",s:"BC Hydro",w:"Jun 2026 to Present",logo:"hydro.png",status:"Active",body:["Worked at Mica Generating Station, one of Canada's largest hydro facility, situated behind BC's tallest Dam at 244m high, with a installed generating capacity of 2.7 GW. Involved with Dam projects, commissioning activities, and coordincation with engineering and construction contractors."]},
   {t:"Protection & Control Planning EIT",s:"BC Hydro",w:"Jan 2025 to Jun 2025",logo:"hydro.png",status:"Complete",body:["Supported protection system studies and planning activities, including relay settings, short circuit analysis and underfrequency load shedding (UFLS) compliance. Gained exposure to protection schemes, remedial action schemes (RAS), and NERC reliability requirements."]},
-  {t:"Transmission Operations Planning EIT",s:"BC Hydro",w:"Jun 2025 to Dec 2025",logo:"hydro.png",status:"Active",body:["Contributed to real-time and operational planning studies for BC Hydro's transmission network and interconnections. Conducted N-1 contingency and high/low load studies, supported outage coordination through CROW and assessed system reliability and operating limits using EMS."]},
+  {t:"Transmission Operations Planning EIT",s:"BC Hydro",w:"Jun 2025 to Dec 2025",logo:"hydro.png",status:"Complete",body:["Contributed to real-time and operational planning studies for BC Hydro's transmission network and interconnections. Conducted N-1 contingency and high/low load studies, supported outage coordination through CROW and assessed system reliability and operating limits using EMS."]},
   {t:"Engineering Co-op II",s:"Fluor",w:"May 2023 to Aug 2024",logo:"fluor.png",status:"Complete",body:["Contributed to multidisciplinary EPCM projects for major mining developments. Delivered documents including load lists, cable schedules, MV/LV MCCs and other equipment specifications."]}
 ];
 var ALLIES=[
@@ -364,7 +364,7 @@ var still=matchMedia("(prefers-reduced-motion: reduce)").matches;
 var $=function(i){return document.getElementById(i)};
 
 /* ===== Generation -> transmission -> loads ===== */
-var GMAX=1200;                 // MW at fully open gates
+var GMAX=900;                 // MW at fully open gates
 var fb=matchMedia("(prefers-contrast: more)").matches;
 var loads=[].slice.call(document.querySelectorAll("[data-load]")).map(function(el){
   var head=el.querySelector(".head"),chip=document.createElement("span");chip.className="chip";head.appendChild(chip);
